@@ -18,7 +18,7 @@ public class ConsumerKafka {
     @KafkaListener(topics = "#{'${spring.kafka.consumer.topic}'}")
     public void receiveMessage(String message) {
         this.logger.info(String.format("#### -> Consumed message -> %s", message));
-        this.queueMessages.enqueue(new KafkaMessage("key", message));
+        this.queueMessages.enqueue(new KafkaMessage(message));
 
     }
 }

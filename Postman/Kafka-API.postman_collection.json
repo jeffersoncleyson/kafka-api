@@ -1,0 +1,58 @@
+{
+	"info": {
+		"_postman_id": "36dc5a8d-9263-4bfd-8408-ff8248f20aed",
+		"name": "Kafka-API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Producer",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"value\": \"value\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:9000/kafka/v1/producer",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"kafka",
+						"v1",
+						"producer"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Consumer",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:9000/kafka/v1/consumer",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"kafka",
+						"v1",
+						"consumer"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
