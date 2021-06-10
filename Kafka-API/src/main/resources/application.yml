@@ -1,0 +1,21 @@
+server:
+  port: 9000
+  servlet:
+    context-path: /kafka/v1
+
+spring:
+  kafka:
+    consumer:
+      bootstrap-servers: localhost:9092
+      topic: topic
+      group-id: group_id
+      auto-offset-reset: earliest
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+    producer:
+      bootstrap-servers: localhost:9092
+      topic: topic
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.apache.kafka.common.serialization.StringSerializer
+
+
